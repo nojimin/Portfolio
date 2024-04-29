@@ -1,14 +1,26 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const Header = () => {
     return (
         <Head>
             <div className="headIn">
-                <h2><a>Jimin's Portfolio</a></h2>
+                <h2 onClick={() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth',
+                    });
+                }}>Jimin's Portfolio</h2>
                 <div className="shortcuts">
-                    <p>About Me</p>
-                    <p>Skill</p>
-                    <p>Project</p>
+                    <Link to="1" spy={true} smooth={true}>
+                        <p>About Me</p>
+                    </Link>
+                    <Link to="2" spy={true} smooth={true}>
+                        <p>Skill</p>
+                    </Link>
+                    <Link to="3" spy={true} smooth={true}>
+                        <p>Project</p>
+                    </Link>
                 </div>
             </div>
         </Head>
@@ -28,12 +40,13 @@ const Head = styled.header`
         border-bottom: 2px solid #D9D9D9;
         background-color: #1A1E1F;
         color: #fff;
+        z-index: 999;
     
         .headIn{
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 71.25rem;
+            max-width: 85rem;
             margin: 0 auto;
             line-height: 64px;
         }

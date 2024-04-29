@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Main2 = () => {
     return(
-        <Main>
+        <Main id="1">
             <div className="mainIn">
                 <h2 className="title">About Me</h2>
                 <div className="content">
@@ -66,13 +66,13 @@ const Main = styled.div`
         line-height: 3rem;
     }
 
-    @media only screen and (min-width: 770px){
+    @media only screen and (min-width: 1000px){
         .mainIn .content ul{
             display: flex;
             justify-content: space-between;
         }
         .mainIn .content li{
-            width: 300px;
+            width: 434px;
         }
     }
 `

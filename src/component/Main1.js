@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const Main1 = () => {
@@ -7,7 +8,9 @@ const Main1 = () => {
                 <div className="text1">안녕하세요!</div>
                 <div className="text2">프론트엔드 개발자를 꿈꾸는 노지민입니다.</div>
                 <div className="text3">어떤 것을 채울지 항상 기대하고 노력하는 사람입니다.</div>
-                <div className="arrow"><span></span></div>
+                <Link to="1" spy={true} smooth={true}>
+                    <div className="arrow"><span></span></div>
+                </Link>
             </div>
         </Main>
     );
@@ -32,7 +35,7 @@ const Main = styled.div`
 
     width: 100%;
     height: 100vh;
-    min-height: 800px;
+    min-height: 678px;
     background-color: #1A1E1F;
     color: #fff;
     line-height: 4rem;
@@ -56,9 +59,10 @@ const Main = styled.div`
     .arrow{
         width: 80px;
         height: 80px;
-        margin: 8rem auto 0;
+        margin: 4rem auto 0;
         border-radius: 100px;
         background-color: #E3DD61;
+        cursor: pointer;
     }
     .arrow span{
         position: absolute;
@@ -85,17 +89,20 @@ const Main = styled.div`
             font-size: 1.2rem;
         }
     }
-    @media only screen and (min-width: 1200px){
+    @media only screen and (min-width: 1440px){
         .mainIn .text1{
             font-size: 4rem;
         }
         .mainIn .text2{
-            margin-top: 3rem;
+            margin-top: 4rem;
             font-size: 4rem;
         }
         .mainIn .text3{
-            margin-top: 6rem;
+            margin-top: 4rem;
             font-size: 2rem;
+        }
+        .arrow{
+            margin-top: 8rem;
         }
     }
 `
